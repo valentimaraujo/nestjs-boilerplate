@@ -70,6 +70,12 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@api/(.*)$": "<rootDir>/domain/api/$1",
+      "^@admin-tool/(.*)$": "<rootDir>/domain/admin-tool/$1",
+      "^@util/(.*)$": "<rootDir>/util/$1",
+      "^@common/(.*)$": "<rootDir>/common/$1"
+    }
   }
 }

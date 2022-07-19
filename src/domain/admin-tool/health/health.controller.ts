@@ -1,15 +1,16 @@
 import { Controller, Get } from '@nestjs/common';
-import { HealthCheck, HealthCheckService } from '@nestjs/terminus';
+import { HealthCheck } from '@nestjs/terminus';
+import { ApiOperation } from '@nestjs/swagger';
+import { HealthService } from '@admin-tool/health/health.service';
 
 @Controller('health')
 export class HealthController {
-  constructor(private health: HealthCheckService) {}
+  constructor(private health: HealthService) {}
 
   @Get()
+  @ApiOperation({ description: 'health check' })
   @HealthCheck()
   check() {
-    const testVar = 'teste';
-    console.log(testVar);
-    return this.health.check([]);
+    return this.health.sendOk();
   }
 }
