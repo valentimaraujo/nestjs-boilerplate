@@ -95,7 +95,8 @@
       "^@api/(.*)$": "<rootDir>/domain/api/$1",
       "^@admin-tool/(.*)$": "<rootDir>/domain/admin-tool/$1",
       "^@util/(.*)$": "<rootDir>/util/$1",
-      "^@common/(.*)$": "<rootDir>/common/$1"
+      "^@common/(.*)$": "<rootDir>/common/$1",
+      "^@config/(.*)$": "<rootDir>/config/$1"
     }
   }
 }

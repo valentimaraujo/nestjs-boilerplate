@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { AdminToolModule } from '@admin-tool/admin-tool.module';
 import { config } from '@config/config';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { config } from '@config/config';
     }),
     AdminToolModule,
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}

@@ -3,7 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 
-describe('AppController (e2e) Test', () => {
+describe('AppController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -15,5 +15,5 @@ describe('AppController (e2e) Test', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => request(app.getHttpServer()).get('/').expect(200).expect('Hello World!'));
+  it('/ (GET)', () => request(app.getHttpServer()).get('/').expect(200).expect('Welcome to Admin Tool API!'));
 });
