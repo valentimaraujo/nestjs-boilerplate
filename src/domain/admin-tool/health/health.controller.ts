@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { HealthCheck } from '@nestjs/terminus';
+import { HealthCheck, HealthCheckResult } from '@nestjs/terminus';
 import { ApiOperation } from '@nestjs/swagger';
 import { HealthService } from '@admin-tool/health/health.service';
 
@@ -10,7 +10,7 @@ export class HealthController {
   @Get()
   @ApiOperation({ description: 'health check' })
   @HealthCheck()
-  check() {
-    return this.health.sendOk();
+  check(): Promise<HealthCheckResult> {
+    return this.health.check();
   }
 }

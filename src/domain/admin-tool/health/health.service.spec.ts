@@ -1,11 +1,13 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { HealthService } from '@admin-tool/health/health.service';
+import { TerminusModule } from '@nestjs/terminus';
 
 describe('HealthService', () => {
   let healthService: HealthService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
+      imports: [TerminusModule],
       providers: [HealthService],
     }).compile();
 
@@ -13,10 +15,14 @@ describe('HealthService', () => {
   });
 
   describe('Health Check', () => {
-    it('Check health is OK', async () => {
-      const existingResult = 'OK';
-      const result = healthService.sendOk();
-      expect(result).toBe(existingResult);
+    it('Check healthOK', async () => {
+      const result = await healthService.check();
+      expect(result).toEqual({
+        status: 'ok',
+        info: {},
+        error: {},
+        details: {},
+      });
     });
   });
 });

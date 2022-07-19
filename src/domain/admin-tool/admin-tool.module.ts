@@ -3,7 +3,7 @@ import { RouterModule } from '@nestjs/core';
 
 import { HealthModule } from '@admin-tool/health/health.module';
 
-const DOMAIN_PREFIX = 'admin-tool';
+const DOMAIN_PREFIX = 'admintool';
 
 @Module({
   imports: [
