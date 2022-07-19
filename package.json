@@ -64,7 +64,8 @@
   "lint-staged": {
     "**/*.ts": [
       "eslint --fix",
-      "jest 'src/**/*.ts test/**/*.ts' --bail"
+      "jest 'src/**/*.ts test/**/*.ts' --bail",
+      "npm run test:e2e"
     ]
   },
   "jest": {
