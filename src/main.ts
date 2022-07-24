@@ -11,7 +11,12 @@ async function bootstrap() {
   const port = configService.get('port');
 
   setupSwagger(app);
-  app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      whitelist: true,
+    }),
+  );
 
   await app.listen(port, () => {
     logger.log(`Listen application in port: ${port}`);
