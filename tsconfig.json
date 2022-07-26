@@ -24,7 +24,8 @@
       "@admin-tool/*": ["src/domain/admin-tool/*"],
       "@util/*": ["src/util/*"],
       "@config/*": ["src/config/*"],
-      "@common/*": ["src/common/*"]
+      "@common/*": ["src/common/*"],
+      "@shared/*": ["src/shared/*"]
     }
   }
 }

@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { PassportModule } from '@nestjs/passport';
+import { ConfigService } from '@nestjs/config';
 
 import { AuthController } from '@admin-tool/auth/auth.controller';
 import { AuthService } from '@admin-tool/auth/auth.service';
 import { AuthJwtStrategy } from '@admin-tool/auth/auth-jwt.strategy';
-import { CognitoConfig } from '@config/cognito.config';
 
 @Module({
   imports: [
@@ -16,10 +16,10 @@ import { CognitoConfig } from '@config/cognito.config';
   providers: [
     AuthService,
     AuthJwtStrategy,
-    CognitoConfig,
+    ConfigService,
     {
-      provide: 'CognitoConfig',
-      useClass: CognitoConfig,
+      provide: 'ConfigService',
+      useClass: ConfigService,
     },
   ],
 })

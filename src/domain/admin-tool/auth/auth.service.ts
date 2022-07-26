@@ -2,21 +2,21 @@ import { Inject, Injectable } from '@nestjs/common';
 import { AuthenticationDetails, CognitoUser, CognitoUserPool, CognitoUserAttribute } from 'amazon-cognito-identity-js';
 
 import { AuthAuthenticationDto } from '@admin-tool/auth/dto/auth-authentication.dto';
-import { CognitoConfig } from '@config/cognito.config';
 import { AuthRegisterDto } from '@admin-tool/auth/dto/auth-register.dto';
+import { ConfigService } from '@nestjs/config';
 
-@Injectable()
 @Injectable()
 export class AuthService {
   private readonly userPool: CognitoUserPool;
 
   constructor(
-    @Inject('CognitoConfig')
-    private readonly authConfig: CognitoConfig,
+    @Inject('ConfigService')
+    private readonly authConfig: ConfigService,
   ) {
+    const config = this.authConfig.get('cognito');
     this.userPool = new CognitoUserPool({
-      UserPoolId: this.authConfig.userPoolId,
-      ClientId: this.authConfig.clientId,
+      UserPoolId: config.userPoolId,
+      ClientId: config.clientId,
     });
   }
 

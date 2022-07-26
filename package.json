@@ -22,6 +22,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@aws/dynamodb-data-mapper": "^0.7.3",
+    "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
@@ -30,6 +32,7 @@
     "@nestjs/swagger": "^6.0.4",
     "@nestjs/terminus": "^9.0.0",
     "amazon-cognito-identity-js": "^5.2.10",
+    "aws-sdk": "^2.1181.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "jwks-rsa": "^2.1.4",
@@ -100,7 +103,8 @@
       "^@admin-tool/(.*)$": "<rootDir>/domain/admin-tool/$1",
       "^@util/(.*)$": "<rootDir>/util/$1",
       "^@common/(.*)$": "<rootDir>/common/$1",
-      "^@config/(.*)$": "<rootDir>/config/$1"
+      "^@config/(.*)$": "<rootDir>/config/$1",
+      "^@shared/(.*)$": "<rootDir>/shared/$1"
     }
   }
 }
