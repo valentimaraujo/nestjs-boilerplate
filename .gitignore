@@ -37,4 +37,4 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-dynamodb-data/*
+dynamodb-data/*.db
