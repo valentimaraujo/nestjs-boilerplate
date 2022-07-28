@@ -729,10 +729,10 @@
   dependencies:
     check-disk-space "3.3.0"
 
-"@nestjs/testing@^9.0.0":
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-9.0.4.tgz#5a7017bb5fd439c4d5fcfe4f8d593f1e4e541981"
-  integrity sha512-N/fq2qv6GhUyZpfTSD4TAS+egMTPConCSQ9zp+t8m2zKNmWQ8AR2dLwiU0VQqQlUJRdoxZHdL4eeU6kNVd7fNw==
+"@nestjs/testing@^9.0.7":
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-9.0.7.tgz#b5eaf5a2157a414cb71ab4d4a9aa4d9850ea6cc4"
+  integrity sha512-dBH+J4wcc+vJiAq9PDFs3NPIj/TNTbyYiNR9Jc/nvbLhlWb/oGz0kcOOqN7K84TAI6zb+RRjTLU7hgHGXj3ldQ==
   dependencies:
     tslib "2.4.0"
 
@@ -952,7 +952,7 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
 
-"@types/node@*", "@types/node@^18.0.6":
+"@types/node@*":
   version "18.0.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.6.tgz#0ba49ac517ad69abe7a1508bc9b3a5483df9d5d7"
   integrity sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==
