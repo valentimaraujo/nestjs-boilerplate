@@ -1,5 +1,6 @@
 export const config = () => ({
   port: Number(process.env.APP_PORT),
+  corsDomains: process.env.CORS_DOMAINS,
   database: {
     dynamodb: {
       accessKeyId: process.env.DYNAMODB_ACCESS_KEY_ID,

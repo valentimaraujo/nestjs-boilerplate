@@ -10,6 +10,16 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const port = configService.get('port');
 
+  const whitelist = configService
+    .get('corsDomains')
+    .split(',')
+    .map((item) => item.trim());
+  const corsOptions = {
+    origin: whitelist,
+    credentials: true,
+  };
+  app.enableCors(corsOptions);
+
   setupSwagger(app);
   app.useGlobalPipes(
     new ValidationPipe({
