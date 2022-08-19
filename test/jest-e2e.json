@@ -8,7 +8,7 @@
   },
   "moduleNameMapper": {
     "^@api/(.*)$": "<rootDir>/../src/domain/api/$1",
-    "^@admin-tool/(.*)$": "<rootDir>/../src/domain/admin-tool/$1",
+    "^@admintool/(.*)$": "<rootDir>/../src/domain/admintool/$1",
     "^@util/(.*)$": "<rootDir>/../src/util/$1",
     "^@common/(.*)$": "<rootDir>/../src/common/$1",
     "^@config/(.*)$": "<rootDir>/../src/config/$1",

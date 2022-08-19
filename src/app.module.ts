@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
-import { AdminToolModule } from '@admin-tool/admin-tool.module';
+import { AdminToolModule } from '@admintool/admintool.module';
 import { config } from '@config/config';
 import { AppController } from './app.controller';
 

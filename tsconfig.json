@@ -21,7 +21,7 @@
     "noUnusedParameters": true,
     "paths": {
       "@api/*": ["src/domain/api/*"],
-      "@admin-tool/*": ["src/domain/admin-tool/*"],
+      "@admintool/*": ["src/domain/admintool/*"],
       "@util/*": ["src/util/*"],
       "@config/*": ["src/config/*"],
       "@common/*": ["src/common/*"],

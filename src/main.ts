@@ -21,6 +21,7 @@ async function bootstrap() {
   app.enableCors(corsOptions);
 
   setupSwagger(app);
+
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,

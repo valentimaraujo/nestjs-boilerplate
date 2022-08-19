@@ -1,8 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { AuthenticationDetails, CognitoUser, CognitoUserPool, CognitoUserAttribute } from 'amazon-cognito-identity-js';
 
-import { AuthAuthenticationDto } from '@admin-tool/auth/dto/auth-authentication.dto';
-import { AuthRegisterDto } from '@admin-tool/auth/dto/auth-register.dto';
+import { AuthAuthenticationDto } from '@admintool/auth/dto/auth-authentication.dto';
+import { AuthRegisterDto } from '@admintool/auth/dto/auth-register.dto';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
@@ -52,7 +52,7 @@ export class AuthService {
     });
   }
 
-  authenticateUser(userDto: AuthAuthenticationDto) {
+  async authenticateUser(userDto: AuthAuthenticationDto) {
     const { email, password } = userDto;
 
     const authenticationDetails = new AuthenticationDetails({
@@ -70,7 +70,12 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       return newUser.authenticateUser(authenticationDetails, {
         onSuccess: (result) => {
+          const token = result.getIdToken();
+          const { payload } = token;
           resolve({
+            id: payload.sub,
+            name: payload.name,
+            email: payload.email,
             token: result.getIdToken().getJwtToken(),
           });
         },

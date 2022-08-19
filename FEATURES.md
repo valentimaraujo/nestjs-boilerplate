@@ -11,7 +11,7 @@
 | Melhor tratamento nas mensagens de erros <br/>do Cognito | <center>🔲</center> |||
 | Melhor tratamento nas mensagens de erros                 | <center>🔲</center> |||
 | Configurar e definir covarege de testes                  | <center>🔲</center> |||
-| Configurar SonarQube                                     | <center>🔲</center> |- [SonarQubes and SonarScanner - Nestjs, Docker](https://gist.github.com/tsabunkar/68bde97f226f8a1640b3ce66c4cf6f73) <br/> - [Nodejs Code Evaluation Using Jest, SonarQube and Docker](https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d) ||
+| Configurar SonarQube                                     | <center>🔲</center> |- [How to set up SonarQube locally on a React TypeScript Project](https://javascript.plainenglish.io/how-to-set-up-sonarqube-locally-on-a-react-typescript-project-ec02cd8e2626) <br/> - [SonarQube and ReactJS : the right way](https://sylvainleroy.medium.com/sonarqube-and-reactjs-the-right-way-5979d02c080d) ||
 
 ### Status icons
 - ✅ OK

@@ -19,6 +19,7 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
+    'max-len': 'off',
     'no-promise-executor-return': 'off',
     'arrow-body-style': 'off',
     'no-useless-escape': 'off',
@@ -32,8 +33,8 @@ module.exports = {
     "object-curly-newline": ["error", {
       "ObjectExpression": "always",
       "ObjectPattern": { "multiline": true },
-      "ImportDeclaration": "never",
-      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+      "ImportDeclaration": { "multiline": true },
+      "ExportDeclaration": { "multiline": true, "minProperties": 4 }
     }],
     '@typescript-eslint/lines-between-class-members': [
       'error',

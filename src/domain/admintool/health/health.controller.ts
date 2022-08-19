@@ -1,7 +1,7 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { HealthCheck, HealthCheckResult } from '@nestjs/terminus';
 import { ApiOperation } from '@nestjs/swagger';
-import { HealthService } from '@admin-tool/health/health.service';
+import { HealthService } from '@admintool/health/health.service';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('health')

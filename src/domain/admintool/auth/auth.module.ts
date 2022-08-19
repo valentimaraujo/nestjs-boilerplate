@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { PassportModule } from '@nestjs/passport';
 import { ConfigService } from '@nestjs/config';
 
-import { AuthController } from '@admin-tool/auth/auth.controller';
-import { AuthService } from '@admin-tool/auth/auth.service';
-import { AuthJwtStrategy } from '@admin-tool/auth/auth-jwt.strategy';
+import { AuthController } from '@admintool/auth/auth.controller';
+import { AuthService } from '@admintool/auth/auth.service';
+import { AuthJwtStrategy } from '@admintool/auth/auth-jwt.strategy';
 
 @Module({
   imports: [

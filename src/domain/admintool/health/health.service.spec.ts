@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { HealthService } from '@admin-tool/health/health.service';
+import { HealthService } from '@admintool/health/health.service';
 import { TerminusModule } from '@nestjs/terminus';
 
 describe('HealthService', () => {
@@ -19,9 +19,15 @@ describe('HealthService', () => {
       const result = await healthService.check();
       expect(result).toEqual({
         status: 'ok',
-        info: {},
-        error: {},
-        details: {},
+        info: {
+          //
+        },
+        error: {
+          //
+        },
+        details: {
+          //
+        },
       });
     });
   });

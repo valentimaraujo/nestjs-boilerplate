@@ -7,7 +7,10 @@ import { AuthService } from './auth.service';
 
 @Injectable()
 export class AuthJwtStrategy extends PassportStrategy(Strategy) {
-  constructor(private readonly authService: AuthService, private configService: ConfigService) {
+  constructor(
+    private readonly authService: AuthService,
+    private configService: ConfigService,
+  ) {
     const cognitoConfig = configService.get('cognito');
     super({
       secretOrKeyProvider: passportJwtSecret({
