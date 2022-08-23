@@ -10,7 +10,7 @@ export class AreaSchema {
   id: string;
 
   @attribute()
-  areaName: string;
+  name: string;
 
   @attribute()
   email: string;

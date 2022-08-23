@@ -34,7 +34,7 @@ export class AreaController {
     return this.service.createSubArea(subAreaDto);
   }
 
-  @Post('/product')
+  @Post('/products')
   @HttpCode(HttpStatus.OK)
   public async createProduto(
     @Body() productDto: ProductCreateDto,

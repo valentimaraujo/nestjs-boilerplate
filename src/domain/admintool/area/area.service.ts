@@ -17,7 +17,7 @@ export class AreaService {
       .put(
         Object.assign(new AreaSchema(), {
           id: uuidGenerate(),
-          areaName: areaDto.areaName,
+          name: areaDto.name,
           email: areaDto.email,
           responsibleId: areaDto.responsibleId,
         }),
@@ -37,7 +37,7 @@ export class AreaService {
       .put(
         Object.assign(new AreaSchema(), {
           id: uuidGenerate(),
-          areaName: subAreaDto.areaName,
+          name: subAreaDto.name,
           email: subAreaDto.email,
           areaId: subAreaDto.areaId,
           responsibleId: subAreaDto.responsibleId,
@@ -58,7 +58,7 @@ export class AreaService {
       .put(
         Object.assign(new AreaSchema(), {
           id: uuidGenerate(),
-          areaName: productDto.areaName,
+          name: productDto.name,
           email: productDto.email,
           areaId: productDto.areaId,
           subAreaId: productDto.subAreaId,

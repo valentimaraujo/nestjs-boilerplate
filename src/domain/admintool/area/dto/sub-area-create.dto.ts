@@ -8,7 +8,7 @@ export class SubAreaCreateDto {
   })
   @IsNotEmpty()
   @Transform(({ value }) => value.trim())
-  areaName: string;
+  name: string;
 
   @ApiProperty({
     example: 'test1@example.com',

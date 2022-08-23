@@ -33,9 +33,9 @@ $ npm run test:cov
 npm install -g dynamodb-admin
 
 // For Windows
-set DYNAMO_ENDPOINT=http://localhost:8001
+set DYNAMO_ENDPOINT=http://localhost:8000
 dynamodb-admin
 
 // For Mac/Linux
-DYNAMO_ENDPOINT=http://localhost:8001 dynamodb-admin
+DYNAMO_ENDPOINT=http://localhost:8000 dynamodb-admin
 ```
