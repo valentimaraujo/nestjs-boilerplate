@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import {
   IsArray,
   IsBoolean,
@@ -39,8 +38,12 @@ export class CreateCampaignDto {
   codCampanha: string;
 
   @IsOptional()
-  @IsArray()
-  defaultUrlRedirect: [{ [k: string]: string }];
+  @IsString()
+  defaultUrlRedirect: string;
+
+  @IsOptional()
+  @IsString()
+  defaultMetaData: string;
 
   @IsNotEmpty()
   @IsString()

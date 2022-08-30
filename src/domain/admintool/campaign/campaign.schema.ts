@@ -1,6 +1,6 @@
 import { attribute, table } from '@aws/dynamodb-data-mapper-annotations';
 
-@table('channels')
+@table('campaigns')
 export class CampaignSchema {
   @attribute()
   id: string;
@@ -27,7 +27,10 @@ export class CampaignSchema {
   textoSecundario: string;
 
   @attribute()
-  defaultUrlRedirect: [{ [k: string]: string }];
+  defaultUrlRedirect: string;
+
+  @attribute()
+  defaultMetaData: string;
 
   @attribute()
   prioridade: string;

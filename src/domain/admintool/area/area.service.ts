@@ -12,14 +12,14 @@ export class AreaService {
     //
   }
 
-  async createArea(areaDto: AreaCreateDto): Promise<AreaSchema> {
+  async createArea(dto: AreaCreateDto): Promise<AreaSchema> {
     return this.dynamoDB.mapper
       .put(
         Object.assign(new AreaSchema(), {
           id: uuidGenerate(),
-          name: areaDto.name,
-          email: areaDto.email,
-          responsibleId: areaDto.responsibleId,
+          name: dto.name,
+          email: dto.email,
+          responsibleId: dto.responsibleId,
         }),
       )
       .then((area) => {
@@ -32,15 +32,15 @@ export class AreaService {
       });
   }
 
-  async createSubArea(subAreaDto: SubAreaCreateDto): Promise<AreaSchema> {
+  async createSubArea(dto: SubAreaCreateDto): Promise<AreaSchema> {
     return this.dynamoDB.mapper
       .put(
         Object.assign(new AreaSchema(), {
           id: uuidGenerate(),
-          name: subAreaDto.name,
-          email: subAreaDto.email,
-          areaId: subAreaDto.areaId,
-          responsibleId: subAreaDto.responsibleId,
+          name: dto.name,
+          email: dto.email,
+          areaId: dto.areaId,
+          responsibleId: dto.responsibleId,
         }),
       )
       .then((subArea) => {
@@ -53,16 +53,16 @@ export class AreaService {
       });
   }
 
-  async createProduto(productDto: ProductCreateDto): Promise<AreaSchema> {
+  async createProduto(dto: ProductCreateDto): Promise<AreaSchema> {
     return this.dynamoDB.mapper
       .put(
         Object.assign(new AreaSchema(), {
           id: uuidGenerate(),
-          name: productDto.name,
-          email: productDto.email,
-          areaId: productDto.areaId,
-          subAreaId: productDto.subAreaId,
-          responsibleId: productDto.responsibleId,
+          name: dto.name,
+          email: dto.email,
+          areaId: dto.areaId,
+          subAreaId: dto.subAreaId,
+          responsibleId: dto.responsibleId,
         }),
       )
       .then((product) => {
